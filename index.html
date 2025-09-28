@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Night Decider - For Couples 💕</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <h1>💕 Date Night Decider</h1>
+        <p class="subtitle">Build your romantic watchlist together and let love decide your perfect movie night!</p>
+
+        <!-- Connection Status -->
+        <div id="statusBar" class="status-bar">
+            <span id="statusText">Connecting your hearts to the shared watchlist... 💖</span>
+        </div>
+
+        <!-- Input Section: Add new movies/series -->
+        <div class="input-section">
+            <div class="input-group">
+                <input 
+                    type="text" 
+                    id="movieInput" 
+                    placeholder="Add a movie for your next date night... 🍿" 
+                    maxlength="100"
+                >
+                <button class="btn-primary" id="addBtn" disabled>Add to Watchlist ❤️</button>
+            </div>
+            
+            <!-- Romantic Movie Suggestions -->
+            <div class="suggestions-section">
+                <p class="suggestions-title">💝 Need inspiration? Try these romantic favorites:</p>
+                <div class="suggestions-grid">
+                    <button class="suggestion-btn" data-movie="The Notebook">The Notebook</button>
+                    <button class="suggestion-btn" data-movie="Titanic">Titanic</button>
+                    <button class="suggestion-btn" data-movie="Pride and Prejudice">Pride & Prejudice</button>
+                    <button class="suggestion-btn" data-movie="Casablanca">Casablanca</button>
+                    <button class="suggestion-btn" data-movie="The Princess Bride">Princess Bride</button>
+                    <button class="suggestion-btn" data-movie="When Harry Met Sally">When Harry Met Sally</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Movies List Section -->
+        <div class="movies-section">
+            <h2 class="section-title">Our Date Night Watchlist 💑</h2>
+            <div class="movies-list" id="moviesList">
+                <div class="loading">Loading shared movie list...</div>
+            </div>
+            <div class="movie-counter" id="movieCounter">Loading...</div>
+        </div>
+
+        <!-- Choose Random Movie Button -->
+        <button class="btn-secondary" id="chooseBtn" disabled>💕 Let Love Decide! 💕</button>
+
+        <!-- Selected Movie Display -->
+        <div id="selectedMovie" style="display: none;"></div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>💕 Your shared watchlist - perfect for couples who can't decide what to watch together! 🍿</p>
+        </div>
+    </div>
+
+    <!-- Load JavaScript module -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>

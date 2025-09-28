@@ -1,0 +1,343 @@
+/* CSS Styling for the Movie Selector App */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(255, 105, 135, 0.3);
+    padding: 35px;
+    min-height: 80vh;
+    border: 2px solid rgba(255, 182, 193, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #d63384;
+    margin-bottom: 10px;
+    font-size: 2.2em;
+    font-weight: 300;
+    text-shadow: 1px 1px 2px rgba(214, 51, 132, 0.1);
+}
+
+.subtitle {
+    text-align: center;
+    color: #e91e63;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+    font-style: italic;
+}
+
+/* Input section styling */
+.input-section {
+    background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    border-left: 4px solid #f06292;
+    box-shadow: 0 4px 15px rgba(240, 98, 146, 0.1);
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+input[type="text"] {
+    flex: 1;
+    min-width: 250px;
+    padding: 12px 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #f06292;
+    box-shadow: 0 0 0 3px rgba(240, 98, 146, 0.2);
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #f06292, #e91e63);
+    color: white;
+    border-radius: 25px;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: linear-gradient(135deg, #e91e63, #c2185b);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(240, 98, 146, 0.4);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #ff6b9d, #ff8fab);
+    color: white;
+    font-size: 18px;
+    padding: 18px 30px;
+    margin: 25px auto;
+    display: block;
+    border-radius: 30px;
+    box-shadow: 0 8px 25px rgba(255, 107, 157, 0.3);
+}
+
+.btn-secondary:hover:not(:disabled) {
+    background: linear-gradient(135deg, #ff8fab, #ffa8c0);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 107, 157, 0.4);
+}
+
+button:disabled {
+    background: #cbd5e0;
+    color: #a0aec0;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Movies list styling */
+.movies-section {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 1.4em;
+    color: #d63384;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #f8bbd9;
+    text-align: center;
+}
+
+.movies-list {
+    background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
+    border-radius: 12px;
+    padding: 20px;
+    min-height: 100px;
+    border: 1px solid rgba(248, 187, 217, 0.3);
+}
+
+.movie-item {
+    background: white;
+    padding: 15px 18px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    border-left: 4px solid #f06292;
+    box-shadow: 0 3px 10px rgba(248, 187, 217, 0.2);
+    animation: fadeIn 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(240, 98, 146, 0.1);
+}
+
+.movie-item:last-child {
+    margin-bottom: 0;
+}
+
+.movie-name {
+    flex: 1;
+}
+
+.added-by {
+    font-size: 0.85em;
+    color: #d63384;
+    font-style: italic;
+    font-weight: 500;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Loading state */
+.loading {
+    text-align: center;
+    color: #718096;
+    font-style: italic;
+    padding: 20px;
+}
+
+/* Connection status */
+.status-bar {
+    background: linear-gradient(135deg, #fce7f3, #f8d7da);
+    border: 2px solid #f06292;
+    border-radius: 25px;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.status-bar.connected {
+    background: linear-gradient(135deg, #d4edda, #c8e6c9);
+    border-color: #28a745;
+    color: #155724;
+}
+
+.status-bar.error {
+    background: #fed7d7;
+    border-color: #feb2b2;
+    color: #c53030;
+}
+
+/* Empty state and messages */
+.empty-message, .no-movies-message {
+    text-align: center;
+    color: #718096;
+    font-style: italic;
+    padding: 20px;
+    background: #edf2f7;
+    border-radius: 6px;
+    border: 2px dashed #cbd5e0;
+}
+
+/* Selected movie display */
+.selected-movie {
+    background: linear-gradient(135deg, #ff6b9d, #ff8fab, #ffa8c0);
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    margin: 25px 0;
+    box-shadow: 0 8px 30px rgba(255, 107, 157, 0.4);
+    animation: pulse 0.5s ease;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.selected-movie h3 {
+    font-size: 1.3em;
+    margin-bottom: 8px;
+}
+
+.selected-movie p {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+/* Counter display */
+.movie-counter {
+    text-align: center;
+    color: #d63384;
+    font-size: 0.95em;
+    margin-top: 12px;
+    font-weight: 500;
+}
+
+/* Responsive design */
+@media (max-width: 500px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    input[type="text"] {
+        min-width: 100%;
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    color: #a0aec0;
+    font-size: 0.9em;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* Romantic Movie Suggestions */
+.suggestions-section {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(240, 98, 146, 0.2);
+}
+
+.suggestions-title {
+    text-align: center;
+    color: #d63384;
+    font-size: 0.9em;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.suggestions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.suggestion-btn {
+    background: rgba(240, 98, 146, 0.1);
+    color: #d63384;
+    border: 1px solid rgba(240, 98, 146, 0.3);
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: none;
+    letter-spacing: normal;
+    font-weight: 500;
+}
+
+.suggestion-btn:hover {
+    background: rgba(240, 98, 146, 0.2);
+    border-color: #f06292;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(240, 98, 146, 0.2);
+}

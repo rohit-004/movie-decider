@@ -18,7 +18,7 @@ Follow these step-by-step instructions to host your Date Night Decider web appli
    - Select "New repository"
 
 3. **Configure your repository**
-   - Repository name: `date-night-decider` (or any romantic name you prefer)
+   - Repository name: `movie-decider` (or any romantic name you prefer)
    - Description: "A romantic web app for couples to decide what to watch together 💕"
    - Make sure it's set to **Public** (required for free GitHub Pages)
    - ✅ Check "Add a README file"

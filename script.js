@@ -238,9 +238,9 @@ function handleKeyPress(event) {
 }
 
 /**
- * Initialize the application
+ * Initialize the application UI and event handlers
  */
-function initializeApp() {
+function initializeAppUI() {
     // Add event listeners
     addBtn.addEventListener('click', addMovie);
     chooseBtn.addEventListener('click', chooseRandomMovie);
@@ -279,4 +279,4 @@ function setupSuggestionButtons() {
 }
 
 // Start the app when the DOM is fully loaded
-document.addEventListener('DOMContentLoaded', initializeApp);
+document.addEventListener('DOMContentLoaded', initializeAppUI);

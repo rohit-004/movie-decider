@@ -13,13 +13,13 @@ import {
 
 // Firebase Configuration - REPLACE WITH YOUR CONFIG
 const firebaseConfig = {
-    // ⚠️ IMPORTANT: Replace these with your actual Firebase config values
-    apiKey: "your-api-key-here",
-    authDomain: "your-project.firebaseapp.com",
-    projectId: "your-project-id",
-    storageBucket: "your-project.appspot.com",
-    messagingSenderId: "123456789",
-    appId: "your-app-id"
+  apiKey: "AIzaSyDgIzJRp_yHqymUG-Q76BbThiKVEfBAtPc",
+  authDomain: "movie-decider-27d41.firebaseapp.com",
+  projectId: "movie-decider-27d41",
+  storageBucket: "movie-decider-27d41.firebasestorage.app",
+  messagingSenderId: "664515766705",
+  appId: "1:664515766705:web:85f8ea7ecf8d5231cd7590",
+  measurementId: "G-P03HCEM9R1"
 };
 
 // Initialize Firebase

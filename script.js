@@ -77,6 +77,8 @@ async function initializeFirebase() {
                 isConnected = true;
                 updateStatus('💕 Connected! Your shared date night list is ready for both of you! 💕');
                 addBtn.disabled = false;
+
+                updateMoviesDisplay();
             }
         }, (error) => {
             console.error('Firebase connection error:', error);
